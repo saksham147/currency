@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/ec1633c775.js"></script>
+        <title>Currency Changer with Charts</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="container bg-light mx-auto shadow-lg box">
+                <form>
+                    <p class="text-center">1 <span id="currency1"></span> = <span id="currencyEqual"></span> <span id="currency2"></span> </p>
+                    
+                    <div class="row mx-auto" style="width: 80%" > 
+                        <div class="col-8 col-md-3 mx-auto mb-3">
+                            <input type="text" class="form-control mb-2 text-right" id="input1" placeholder="0">
+                            <input type="text" class="form-control mb-2 text-right" id="input2" placeholder="0">
+                        </div>
+                        <div class="col-10 col-md-7 mx-auto mb-3">
+                            <select class="form-control mb-2" id="select1">
+                                <option>AED - United Arab Emirates Dirham</option>
+                                <option>ARS - Argentine Peso</option>
+                                <option>AUD - Australian Dollar</option>
+                                <option>AZN - Azerbaijani Manat</option>
+                                <option>BGN - Bulgarian Lev</option>
+                                <option>BHD - Bahraini Dinar</option>
+                                <option>BND - Brunei Dollar</option>
+                                <option>BRL - Brazilian Real</option>
+                                <option>CAD - Canadian Dollar</option>
+                                <option>CHF - Swiss Franc</option>
+                                <option>CLP - Chilean Peso</option>
+                                <option>CNY - Chinese Yuan</option>
+                                <option>CZK - Czech Koruna</option>
+                                <option>DKK - Danish Krone</option>
+                                <option>EGP - Egyptian Pound</option>
+                                <option>EUR - Euro</option>
+                                <option>FJD - Fiji Dollar</option>
+                                <option>GBP - Pound Sterling</option>
+                                <option>HKD - Hong Kong Dollar</option>
+                                <option>HUF - Hungarian Forint</option>
+                                <option>IDR - Indonesian rRpiah</option>
+                                <option>ILS - Israeli New Shekel</option>
+                                <option>INR - Indian Rupee</option>
+                                <option>JPY - Japanese Yen</option>
+                                <option>KRW - South Korean Won</option>
+                                <option>KWD - Kuwaiti Dinar</option>
+                                <option>LKR - Sri Lankan Rupee</option>
+                                <option>MAD - Moroccan Dirham</option>
+                                <option>MGA - Malagasy Ariary</option>
+                                <option>MXN - Mexican Peso</option>
+                                <option>MYR - Malaysian Ringgit</option>
+                                <option>NOK - Norwegian Krone</option>
+                                <option>NZD - New Zealand Dollar</option>
+                                <option>OMR - Omani Rial</option>
+                                <option>PEN - Peruvian Sol</option>
+                                <option>PGK - Papua New Guinean Kina</option>
+                                <option>PHP - Philippine Peso</option>
+                                <option>PKR - Pakistani Rupee</option>
+                                <option>PLN - Polish Złoty</option>
+                                <option>RUB - Russian Ruble</option>
+                                <option>SAR - Saudi Riyal</option>
+                                <option>SBD - Solomon Islands Dollar</option>
+                                <option>SCR - Seychelles Rupee</option>
+                                <option>SEK - Swedish Krona/Kronor</option>
+                                <option>SGD - Singapore Dollar</option>
+                                <option>THB - Thai Baht</option>
+                                <option>TOP - Tongan pPaʻanga</option>
+                                <option>TRY - Turkish Lira</option>
+                                <option>TWD - New Taiwan Dollar</option>
+                                <option>TZS - Tanzanian Shilling</option>
+                                <option selected>USD - United States Dollar</option>
+                                <option>VEF - Venezuelan Bolívar</option>
+                                <option>VND - Vietnamese Dồng</option>
+                                <option>VUV - Vanuatu Vatu</option>
+                                <option>WST - Samoan Tala</option>
+                                <option>XOF - CFA Franc BCEAO</option>
+                                <option>ZAR - South African Rand</option>
+                            </select>
+                            <select class="form-control mb-2" id="select2">
+                                <option>AED - United Arab Emirates Dirham</option>
+                                <option>ARS - Argentine Peso</option>
+                                <option>AUD - Australian Dollar</option>
+                                <option>AZN - Azerbaijani Manat</option>
+                                <option>BGN - Bulgarian Lev</option>
+                                <option>BHD - Bahraini Dinar</option>
+                                <option>BND - Brunei Dollar</option>
+                                <option>BRL - Brazilian Real</option>
+                                <option>CAD - Canadian Dollar</option>
+                                <option>CHF - Swiss Franc</option>
+                                <option>CLP - Chilean Peso</option>
+                                <option>CNY - Chinese Yuan</option>
+                                <option>CZK - Czech Koruna</option>
+                                <option>DKK - Danish Krone</option>
+                                <option>EGP - Egyptian Pound</option>
+                                <option selected>EUR - Euro</option>
+                                <option>FJD - Fiji Dollar</option>
+                                <option>GBP - Pound Sterling</option>
+                                <option>HKD - Hong Kong Dollar</option>
+                                <option>HUF - Hungarian Forint</option>
+                                <option>IDR - Indonesian rRpiah</option>
+                                <option>ILS - Israeli New Shekel</option>
+                                <option>INR - Indian Rupee</option>
+                                <option>JPY - Japanese Yen</option>
+                                <option>KRW - South Korean Won</option>
+                                <option>KWD - Kuwaiti Dinar</option>
+                                <option>LKR - Sri Lankan Rupee</option>
+                                <option>MAD - Moroccan Dirham</option>
+                                <option>MGA - Malagasy Ariary</option>
+                                <option>MXN - Mexican Peso</option>
+                                <option>MYR - Malaysian Ringgit</option>
+                                <option>NOK - Norwegian Krone</option>
+                                <option>NZD - New Zealand Dollar</option>
+                                <option>OMR - Omani Rial</option>
+                                <option>PEN - Peruvian Sol</option>
+                                <option>PGK - Papua New Guinean Kina</option>
+                                <option>PHP - Philippine Peso</option>
+                                <option>PKR - Pakistani Rupee</option>
+                                <option>PLN - Polish Złoty</option>
+                                <option>RUB - Russian Ruble</option>
+                                <option>SAR - Saudi Riyal</option>
+                                <option>SBD - Solomon Islands Dollar</option>
+                                <option>SCR - Seychelles Rupee</option>
+                                <option>SEK - Swedish Krona/Kronor</option>
+                                <option>SGD - Singapore Dollar</option>
+                                <option>THB - Thai Baht</option>
+                                <option>TOP - Tongan pPaʻanga</option>
+                                <option>TRY - Turkish Lira</option>
+                                <option>TWD - New Taiwan Dollar</option>
+                                <option>TZS - Tanzanian Shilling</option>
+                                <option >USD - United States Dollar</option>
+                                <option>VEF - Venezuelan Bolívar</option>
+                                <option>VND - Vietnamese Dồng</option>
+                                <option>VUV - Vanuatu Vatu</option>
+                                <option>WST - Samoan Tala</option>
+                                <option>XOF - CFA Franc BCEAO</option>
+                                <option>ZAR - South African Rand</option>
+                            </select>
+                        </div>
+                        <div class="col-2 col-md-2 mx-auto">
+                            <button type="button" class="btn btn-outline-primary mt-4" id="btnChng"><i class="fas fa-sync"></i></button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-12 mt-4">
+                        <h4 class="text-center mb-4 border-bottom" id="refresh">Price Chart</h4>
+                                
+                        <div class="input-group mb-2 justify-content-end">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text btn-outline-warning">
+                                    <span class="mr-2 klein">Refresh every 5 min.</span> 
+                                    <input type="checkbox" id="repeatCheck">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" class="btn btn-outline-danger ml-0 btn0">5min</button>
+                            <button type="button" class="btn btn-outline-primary btn1">60min</button>
+                            <button type="button" class="btn btn-outline-warning btn2">Daily</button>
+                            <button type="button" class="btn btn-outline-success btn3">Weekly</button>
+                            <button type="button" class="btn btn-outline-secondary btn4">Monthly</button>
+                            <button type="button" class="btn btn-outline-danger btn5 ml-auto mr-0" data-toggle="modal" data-target="#setAlertPrice"><i class="far fa-bell mr-1"></i>Alert</button>
+                            <button type="button" class="btn btn-warning d-none" id="bellslash">
+                                <i class="far fa-bell-slash"></i>
+                            </button>
+                            
+                            <audio id="alarm" class="ml-2">
+                                <source src="./alarm.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                        <div class="shadow chart" id="chartContainer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Set Loading Effect -->
+            <div class="loadEffect"></div>
+
+            <!-- Set Alarm Modal -->
+            <div id="setAlertPrice" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h5 class="modal-title">Set Alert Price</h5>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">                        
+                                <div class="form-group">
+                                    <label class="control-label">Please set your goal price.!</label>
+                                    <input type="number" class="form-control" id="setAlertPriceInput">
+                                </div>                   
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" id="setAlertBtn" data-dismiss="modal">Set & Close</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <!-- scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
